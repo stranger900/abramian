@@ -12,10 +12,10 @@ void main()
 
 	//Calculations
 
-	b = (a % 3600);
+	b = (a % 3600)/60;
 
 	//Output data 
 
-	cout << "Time = " << b << " second(s)" << endl;
+	cout << "Time = " << b << " minute(s)" << endl;
 
 }
