@@ -32,7 +32,7 @@ void main()
 		case 9: { cout << year << " Рік жовтого(ї) "; break; }
 		}
 
-		de = (year + 8) % 12;
+		de = (year + 8) % 12;//розрахунок починається з 8 року н.е.
 
 		switch (de) {
 		case 0: { cout << "щура " << endl; break; }
