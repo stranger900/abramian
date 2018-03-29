@@ -6,7 +6,7 @@ using namespace std;
 
 void main()
 {
-	double x,  rez, sum = 0, factorial = 1, dob = 1;
+	double x,  rez, sum = 1, factorial = 1, dob = 1;
 	int n, sign = -1;
 
 	SetConsoleCP(1251);
@@ -17,13 +17,11 @@ void main()
 	cout << "Внесіть число N (N > 0): " << endl;
 	cin >> n;
 	
-	sum = x;
-	for (int i = 1; i <= (n * 2 +1); i++) {
+	for (int i = 1; i <= (n * 2); i++) {
 		factorial *= i;
-		dob *= x;
-
-		if (i>2 && i % 2 == 1) {
-			rez = sign*dob / factorial;
+		if (i % 2 == 0) {
+			dob *= x;
+			rez = sign*dob*dob / factorial;
 			sum += rez;
 			sign *= (-1);
 			cout << "Результат = " << rez << endl;
@@ -33,5 +31,5 @@ void main()
 	cout << endl;
 	cout << "sum = " << sum << endl;
 	cout << endl;
-	cout << "sin(x) = " << sin(x) << endl;
+	cout << "cos(x) = " << cos(x) << endl;
 }
