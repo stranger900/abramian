@@ -6,26 +6,22 @@ using namespace std;
 
 void main()
 {
-	double a, b, sum = 0, i;
+	double n, a = 1, dob = 1;
 
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	cout << "Внесіть число A (A < B) : " << endl;
-	cin >> a;
-	cout << "Внесіть число B : " << endl;
-	cin >> b;
+	cout << "Внесіть число N : " << endl;
+	cin >> n;
 	cout << endl;
-
-	i = b - a;
-	sum = a;
-	while (i>0) {
-		a++;
-		sum += a;
-		//cout << "sum = "<<sum << "\t i = "<< i << endl;
-		--i;
-	}
 	
-	cout <<"Сума = "<< sum << endl;
+	while (true) {
+		dob = a * a;
+		a++;
+		//cout << "dob = "<< dob << "\t a = " << a << endl;
+		if (dob > n) { break; }
+	}
+
+	cout << "K = " << dob << endl;
 	cout << endl;
 }
