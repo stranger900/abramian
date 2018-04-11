@@ -6,7 +6,7 @@ using namespace std;
 
 void main()
 {
-	double n, sum = 1, i = 1.1; //sign = 1;
+	double n, sum = 0, i = 1.1, i1 = 1, sign = 1, count = 0;
 
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
@@ -15,14 +15,15 @@ void main()
 	cin >> n;
 	cout << endl;
 
-	while (n > 0) {
-		sum *=  i;
-		cout << "sum = "<<sum << "\t i = "<< i << " n = " << n << endl;
-		--n;
+	while (count < n) {
+		sum += sign * i;
+		//cout << "sum = "<<sum << "\t i = "<< i << " sign = " << sign << " count = " << count <<  endl;
+		i1 = i;
 		i += 0.1;
-		//sign *= (-1);
+		sign *= (-1);
+		count++;
 	}
 	
-	cout <<"Добуток = "<< sum << endl;
+	cout <<"Сума = "<< sum << endl;
 	cout << endl;
 }
