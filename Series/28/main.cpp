@@ -12,10 +12,9 @@ void main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	cout << "Внесіть K: " << endl;
-	cin >> k;
 	cout << "Внесіть N: " << endl;
 	cin >> size;
+	k = size;
 
 	float *arr = new float[size];
 
@@ -24,10 +23,10 @@ void main()
 		cin >> arr[i];
 	}
 
-	
 	for (int m = 0; m < size; m++) {
 		s = arr[m];
-		cout << pow(s, k) << endl;
+		cout << " s = " << s << " k = " << k << "\t A = " << pow(s, k) << endl;
+		k--;
 	}
 	
 	

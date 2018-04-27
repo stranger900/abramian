@@ -7,13 +7,11 @@ using namespace std;
 
 void main()
 {
-	int size, s = 0, k = 0;
+	int size, s = 0;
 
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	cout << "Внесіть K: " << endl;
-	cin >> k;
 	cout << "Внесіть N: " << endl;
 	cin >> size;
 
@@ -27,7 +25,7 @@ void main()
 	
 	for (int m = 0; m < size; m++) {
 		s = arr[m];
-		cout << pow(s, k) << endl;
+		cout << pow(s, m+1) << endl;
 	}
 	
 	
