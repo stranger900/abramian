@@ -7,7 +7,7 @@ using namespace std;
 
 void main()
 {
-	int sizeK, sizeN, number = 0, count = 0;
+	int sizeK, sizeN, number = 0, count = 0, sum = 0;
 
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
@@ -29,12 +29,16 @@ void main()
 	for (int i = 0; i < sizeK; i++) {
 		for (int j = 0; j < sizeN; j++) {
 			arr[i][j] = rand() % 10;
-			if (arr[i][j] == 2) { count++; number = j + 1;}
+			sum += arr[i][j];
+			if (arr[i][j] == 2) { count++;}
 			
-			cout << "arr ["<<i + 1 <<"]["<< j + 1 <<"] = " << arr[i][j] << "\tnumber = " << number << "\tcount = " << count << endl;
+			cout << "arr ["<<i + 1 <<"]["<< j + 1 <<"] = " << arr[i][j] << endl;
 		}
-		cout << "Номер = " << number << endl;
-		number = 0;
+		if (count > 0) { cout << "\t\tSum = " << sum << endl; }
+		else { cout << "\t\tSum = " << 0 << endl; }
+		count = 0;
+		sum = 0;
+
 	}
 	
 	//////////////////////////////
