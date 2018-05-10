@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void Swap(double *x, double *y);
+void MinMax(double *x, double *y);
 
 void Entering(double &a, double &b, double &c, double &d) {
 
@@ -31,19 +31,21 @@ void main()
 	Entering(a, b, c, d/*pa, pb, pc, pd*/);
 	
 	cout << a<<" " << b << " " << c << " " << d << endl;
-	Swap(&a, &b);
+	MinMax(&a, &b);
 	cout << a << " " << b << " " << c << " " << d << endl;
-	Swap(&c, &d);
+	MinMax(&c, &d);
 	cout << a << " " << b << " " << c << " " << d << endl;
-	Swap(&b, &c);
-	
+	MinMax(&a, &c);
+	cout << a << " " << b << " " << c << " " << d << endl;
+	MinMax(&b, &d);
 	cout << a << " " << b << " " << c << " " << d << endl;
 }
-void Swap(double *x, double *y) {
-	
+void MinMax(double *x, double *y) {
 	double temp;
-	temp = *x;
-	*x = *y;
-	*y = temp;
+	if (*x > *y) {
+		temp = *x;
+		*x = *y;
+		*y = temp;
+	}
 	
 }
