@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double Sign(double x);
+int Sign(int x);
 
 void Entering(double &a, double &b) {
 
@@ -26,7 +26,7 @@ void main()
 	
 	cout << "Sign(A) + Sign(B) = " << Sign(a) + Sign(b) << endl;
 }
-double Sign(double x) {
+int Sign(int x) {
 	if (x < 0) {
 		return (-1);
 	}
